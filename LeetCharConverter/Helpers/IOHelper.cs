@@ -69,7 +69,7 @@ namespace LeetCharConverter.Helpers
             using (StreamWriter writetext = new StreamWriter($@"{_outputDirectory}\Words_{DateTime.Now.ToString("ddMMyyyy_hhmmmss")}.txt"))
             {
                 foreach (string word in leetWords)
-                    writetext.WriteLine(word);
+                    writetext.WriteLine(word.Replace("[", "").Replace("]", ""));
             }
         }
     }
